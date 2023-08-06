@@ -335,7 +335,7 @@ class ZoneFile {
 
 		if(
 			in_array(
-				'format=json',
+				'--format=json',
 				$GLOBALS['argv']
 			)
 		) return json_encode($this->records);
