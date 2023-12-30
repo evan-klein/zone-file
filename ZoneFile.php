@@ -1,5 +1,7 @@
 <?php
 
+namespace evan_klein\zone_file;
+
 class ZoneFile {
 	private $domain = 'example.com.';
 	private $ttl = 60; // The default TTL, used when one is not specified for a record
@@ -362,5 +364,8 @@ OUTPUT;
 		}
 	}
 }
+
+namespace evan_klein\domain;
+class Domain extends \evan_klein\zone_file\ZoneFile {}
 
 ?>

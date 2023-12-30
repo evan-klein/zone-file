@@ -20,7 +20,7 @@ This creates a new instance of the ZoneFile object.
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 240);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 240);
 
 ?>
 ```
@@ -42,7 +42,7 @@ This method adds an A record to the zone.
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 240);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 240);
 $zone_file->addA('example.com.', '93.184.216.34', 120);
 $zone_file->addA('www', '93.184.216.34', 180);
 $zone_file->addA('www1.example.com.', '93.184.216.34');
@@ -67,7 +67,7 @@ This method adds an AAAA record to the zone.
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 240);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 240);
 $zone_file->addAAAA('example.com.', '2606:2800:220:1:248:1893:25c8:1946', 120);
 $zone_file->addAAAA('www', '2606:2800:220:1:248:1893:25c8:1946', 180);
 $zone_file->addAAAA('www1.example.com.', '2606:2800:220:1:248:1893:25c8:1946');
@@ -92,7 +92,7 @@ This method adds a CNAME record to the zone.
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 240);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 240);
 $zone_file->addCNAME('www', 'www1', 180);
 $zone_file->addCNAME('www2.example.com.', 'www3');
 $zone_file->addCNAME('www4', 'www5.example.com.');
@@ -117,7 +117,7 @@ This method adds a TXT record to the zone.
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 240);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 240);
 $zone_file->addTXT('example.com.', 'key=value', 120);
 $zone_file->addTXT('www', 'key=value', 180);
 $zone_file->addTXT('www1.example.com.', 'key=value');
@@ -143,7 +143,7 @@ This method adds a MX record to the zone.
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 240);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 240);
 $zone_file->addMX('example.com.', 10, 'mail', 120);
 $zone_file->addMX('example.com.', 10, 'mail1.example.com.');
 $zone_file->addMX('example.com.', 20, 'mail2.example.com.');
@@ -167,7 +167,7 @@ This method adds a NS record to the zone.
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 240);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 240);
 $zone_file->addNS('example.com.', 'ns.nameserver.com.', 120);
 
 ?>
@@ -184,7 +184,7 @@ Outputs the zone file.
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 180);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 180);
 
 $zone_file->addA('www', '93.184.216.34', 120);
 $zone_file->addAAAA('www', '2606:2800:220:1:248:1893:25c8:1946', 120);

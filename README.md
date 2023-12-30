@@ -18,7 +18,7 @@ A simple PHP class for generating DNS [zone files](https://en.wikipedia.org/wiki
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 180);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 180);
 
 $zone_file->addA('www', '93.184.216.34', 120);
 $zone_file->addAAAA('www', '2606:2800:220:1:248:1893:25c8:1946', 120);
@@ -45,7 +45,7 @@ You can also chain commands like this:
 
 require('ZoneFile.php');
 
-$zone_file = new ZoneFile('example.com.', 180);
+$zone_file = new \evan_klein\zone_file\ZoneFile('example.com.', 180);
 
 echo $zone_file->addA('www', '93.184.216.34', 120)
 	->addAAAA('www', '2606:2800:220:1:248:1893:25c8:1946', 120)
